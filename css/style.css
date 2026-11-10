@@ -11,7 +11,7 @@ body{
 Barra de navegacion 
 */
 header{
-    background-color: #190b75;
+    background: #190b75;
     margin: 0;
     display: flex;
 }
@@ -43,7 +43,12 @@ h1{
     text-decoration: none;
 }
 .logo img{
-    height: 55px;
+    height: 50px;
+}
+.boton-login{
+    background: orange;
+    border-radius: 19px;
+    padding: 10px 20px;
 }
 
 button{
@@ -58,12 +63,85 @@ button{
 button:hover{
     background-color: #e33d00;
 }
+/* Cuerpo de la pagina */
 
+.banner {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .banner a {
+    background: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .tarjetas {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .tarjeta {
+    border: 2px solid gray;
+    border-radius: 25px;
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+  }
+
+  .tarjeta div {
+    padding: 15px;
+  }
+.banner img {
+    border-radius: 10%;
+    height: 380px;
+}
+.boton-tarjeta{
+    text-align: center;
+}
 /*
 Pie de la pagina */
 footer{
     background-color:#190b75 ;
     color: #ffffff;
     padding: 10px;
+    font-size: large;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+}
+.copy{
+    text-align: center;
+}
+footer .contacto{
+    text-align: left;
+    padding: 5px 10px;
+    margin: 0;
+}
+footer .contacto b {
+    color: black;
+}
+.redes{    
+    display: flex;
+    gap: 15px;
+    padding: 5px 5px;
+    border-color: #ffffff;
+    justify-content:flex-end;
+}
+
+.redes img{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
 }
