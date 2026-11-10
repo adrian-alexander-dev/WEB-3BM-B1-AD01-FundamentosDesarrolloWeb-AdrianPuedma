@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento Automotriz</title>
+    <title>Solanda Car Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,59 +11,73 @@
     <header>
         <a href="index.html" class="logo">
             <img src="img/imagen1.png" alt="LOGO">
-            <h1>Mantenimiento Automotriz</h1>
+            <h1>Solanda Car Service</h1>
         </a>
 
         <nav>
             <a href="index.html">Inicio</a>
+            <a href="index.html#acerca">Acerca de</a>
             <a href="servicios.html">Servicios</a>
             <a href="solicitud.html">Solicitar Servicio</a>
+            <a href="usuario.html">Mis Mantenimientos</a>
             <a href="admin.html">Administracion</a>
-<a href="login.html" class="boton-login">Iniciar Sesion 
-            </a>
+            <a href="login.html" class="boton-login">Iniciar Sesion</a>
         </nav>
+    </header>
 
-</header>
-    
-<div class = "contenedor-login">
-    <form id="formulario">
-        <label for="usuario">Usuario</label>
-        <input type="text"
-                id = "usuario"
-                placeholder="Ingrese su Usuario"
-                minlength="3"
-                required>
+    <main>
+        <div class="contenedor-login">
+            <form id="formulario">
+                <label for="correo">Correo Electronico</label>
+                <input class="form-control" type="email" id="correo" placeholder="nombre@dominio.com" required>
 
-        <label for="nombre">Correo Electronico</label>
-        <input type="email"
-                id = "correo"
-                placeholder="nombr@dominio.com"
-                required>
+                <label for="contrasenia">Contraseña</label>
+                <input class="form-control" type="password" id="contrasenia" minlength="8" maxlength="100" required>
 
-        <label for="contrasenia">Contraseña</label>
-        <input type="text"
-                id = "contrasenia"
-                min="8"
-                max="100"
-                required>
-    </form>
-   <input type="text">
-</select>
+                <div class="botones-login">
+                    <button type="submit" class="btn btn-danger btn-enviar">Iniciar Sesion</button>
+                </div>
 
-
-
-
-</div>
+                <p>admin@mecanica.com | admin123</p>
+                <p>maria@gmail.com | maria123</p>
+            </form>
+        </div>
+    </main>
 
     <footer>
-         &copy; Mi Empresa 2026 todos los derechos reservados.
-        <div>
-            <b style="color: #000000;">Direccion : </b>Av.Solanda </l>
-            <b style="color: #000000;">Contacto : </b> 099999999
+        <div class="footer-col">
+            <h4>Solanda Car Service</h4>
+            <p>Cuidamos tu vehiculo como si fuera nuestro.</p>
         </div>
 
+        <div class="footer-col contacto">
+            <h4>Contacto</h4>
+            <p><b>Direccion:</b> Av. Solanda</p>
+            <p><b>Telefono:</b> 099999999</p>
+            <p><b>Horario:</b> Lunes a Viernes 08:00 - 17:00</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Siguenos</h4>
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/instagram.webp" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/facebook.webp" alt="facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="img/youtube.webp" alt="youtube">
+                </a>
+            </div>
+        </div>
+
+        <div class="copy">
+            &copy; 2026 Solanda Car Service. Todos los derechos reservados.
+        </div>
     </footer>
 
-    hola
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/javascript.js"></script>
 </body>
 </html>

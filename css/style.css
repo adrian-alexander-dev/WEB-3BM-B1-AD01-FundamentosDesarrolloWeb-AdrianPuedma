@@ -1,11 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-color: #2b2d42;
     margin: 0;
-    min-height:0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #ffffff;
-
 }
 /*
 Barra de navegacion 
@@ -13,10 +16,14 @@ Barra de navegacion
 header{
     background: #190b75;
     margin: 0;
+    padding: 5px 10px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
@@ -42,6 +49,10 @@ h1{
     gap:10px;
     text-decoration: none;
 }
+.logo h1{
+    margin: 0;
+    font-size: 28px;
+}
 .logo img{
     height: 50px;
 }
@@ -51,6 +62,7 @@ h1{
     padding: 10px 20px;
 }
 
+/* botones (una sola vez) */
 button{
     background-color: #ff6b35;
     color: #ffffff;
@@ -61,87 +73,320 @@ button{
 }
 
 button:hover{
-    background-color: #e33d00;
+    background-color: #aa0303;
 }
+
+/* enlace que se ve como boton */
+.boton{
+    display: inline-block;
+    background-color: #ff6b35;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 8px 14px;
+    text-decoration: none;
+}
+.boton:hover{
+    background-color: #aa0303;
+    color: #ffffff;
+}
+
 /* Cuerpo de la pagina */
+
+main{
+    padding: 40px 20px;
+}
+.inicio{
+    padding: 0;
+}
+.titulo{
+    text-align: center;
+}
 
 .banner {
     color: white;
     text-align: center;
-    padding: 80px 20px;
-  }
+    padding: 60px 20px;
+}
 
-  .banner a {
+.banner a {
     background: orange;
     color: white;
     padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-  }
+}
 
-  .tarjetas {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .tarjeta {
-    border: 2px solid gray;
-    border-radius: 25px;
-  }
-
-  .tarjeta img {
-    width: 100%;
-    height: 250px;
-    border-radius: 25px;
-  }
-
-  .tarjeta div {
-    padding: 15px;
-  }
 .banner img {
     border-radius: 10%;
     height: 380px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.tarjetas {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta {
+    border: 2px solid gray;
+    border-radius: 25px;
+    background-color: #190b75;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta div {
+    padding: 15px;
 }
 .boton-tarjeta{
     text-align: center;
+    margin-top: auto;
 }
+
+/* Acerca de */
+.acerca {
+    padding: 40px 20px;
+}
+.acerca h2 {
+    font-size: 28px;
+    color: #ff6b35;
+}
+
+/*Solicitud*/
+
+.solicitud {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    color: #222;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.solicitud main{
+    padding: 0;
+}
+.solicitud h1{
+    color: black;
+}
+
+h2 {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.fila {
+    display: grid;
+    gap: 15px;
+}
+
+.dos    { grid-template-columns: 1fr 1fr; }
+.tres   { grid-template-columns: 1fr 1fr 1fr; }
+.cuatro { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botones {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.btn-enviar  { 
+    background: #e8100c; 
+    padding: 10px 20px; 
+}
+
+/*login*/
+.contenedor-login{
+    margin: auto;
+    width: 350px;
+    max-width: 100%;
+    padding: 30px ;
+    border-radius: 10px;
+    background-color: #1a1070;
+    text-align: center;
+}
+.botones-login{
+    margin-bottom: 15px;
+}
+#formulario label{
+    display: block;
+    margin-bottom: 5px;
+}
+#formulario input{
+    width: 250px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+/*admin y mis solicitudes*/
+
+.panel {
+    max-width: 1100px;
+    width: 95%;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    color: #222;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.panel h1{
+    color: black;
+}
+.perfil p{
+    margin-bottom: 5px;
+}
+
+#buscador {
+    width: 250px;
+    max-width: 100%;
+    padding: 8px;
+    margin: 15px 0;
+}
+
+/* para que la tabla se pueda mover de lado en el celular */
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+/* ---------- tabla ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;   /* junta los bordes de las celdas */
+    margin-bottom: 30px;
+}
+
+th {
+    background: #212529;         /* encabezado oscuro */
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;   /* línea entre filas */
+}
+
+td select {
+    min-width: 130px;
+}
+
+/* ---------- etiquetas de colores ---------- */
+.etiqueta {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.admin   {
+     background: #17c1e8; 
+     color: black; 
+    }
+.cliente { 
+    background: #ffc107; 
+    color: black; 
+}
+.verde   { 
+    background: #198754;
+     color: white;
+     }
+.rojo    { 
+    background: #dc3545; 
+    color: white; 
+}
+
 /*
 Pie de la pagina */
 footer{
-    background-color:#190b75 ;
+    background-color: #190b75;
     color: #ffffff;
-    padding: 10px;
-    font-size: large;
+    padding: 30px 40px 10px;
     margin-top: auto;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-decoration: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
-.copy{
-    text-align: center;
+.footer-col{
+    flex: 1;
+    min-width: 200px;
 }
-footer .contacto{
-    text-align: left;
-    padding: 5px 10px;
-    margin: 0;
+.footer-col h4{
+    color: #ff6b35;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-col p{
+    margin: 0 0 5px;
+    font-size: 15px;
 }
 footer .contacto b {
-    color: black;
+    color: #ffffff;
 }
-.redes{    
+.redes{
     display: flex;
-    gap: 15px;
-    padding: 5px 5px;
-    border-color: #ffffff;
-    justify-content:flex-end;
+    gap: 12px;
 }
 
 .redes img{
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* el copyright va en una fila aparte, abajo de todo */
+.copy{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #c9c9c9;
+    padding-top: 10px;
+}
+
+/* ---------- celular y tablet ---------- */
+@media (max-width: 900px) {
+    .tarjetas { grid-template-columns: 1fr 1fr; }
+    .cuatro   { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    header { justify-content: center; }
+    nav { margin: 0; justify-content: center; gap: 12px; }
+    .logo h1 { font-size: 20px; }
+    .banner img { height: 220px; }
+    .tarjetas, .dos, .tres, .cuatro { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; padding: 20px; }
+    .redes { justify-content: center; }
 }

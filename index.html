@@ -1,149 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento Automotriz</title>
+    <title>Solanda Car Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">
             <img src="img/imagen1.png" alt="LOGO">
-            <h1>Mantenimiento Automotriz</h1>
+            <h1>Solanda Car Service</h1>
         </a>
-        
+
         <nav>
             <a href="index.html">Inicio</a>
+            <a href="index.html#acerca">Acerca de</a>
             <a href="servicios.html">Servicios</a>
             <a href="solicitud.html">Solicitar Servicio</a>
+            <a href="usuario.html">Mis Mantenimientos</a>
             <a href="admin.html">Administracion</a>
             <a href="login.html" class="boton-login">Iniciar Sesion</a>
         </nav>
-        
-</header>
+    </header>
 
+    <main class="inicio">
 
-<section class="banner">
-    <img src="img/banner.jpg" alt="banner">
-  <h1>Servicios</h1>
-  <p>Contamos con este servicio</p>
-  <a href="#tarjetas">Solicitar</a>
-</section>
+    <section class="banner">
+        <img src="img/banner.jpg" alt="banner">
+        <h1>Cuidamos tu vehiculo</h1>
+        <p>Contamos con mecanicos con experiencia para el mantenimiento de tu auto</p>
+        <a href="#tarjetas">Ver servicios</a>
+    </section>
 
+    <section class="tarjetas" id="tarjetas">
 
-<section class="tarjetas" id="tarjetas">
+        <article class="tarjeta">
+            <img src="img/servicio1.jpg" alt="Mantenimiento Preventivo">
+            <div>
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Revisamos llantas, suspension, filtros y niveles para que tu vehiculo no falle en el camino.</p>
+            </div>
+            <div class="boton-tarjeta">
+                <a href="solicitud.html?servicio=Mantenimiento+Preventivo" class="btn btn-warning boton">Solicitar</a>
+            </div>
+        </article>
 
-  </article>
-    
+        <article class="tarjeta">
+            <img src="img/servicio2.jpg" alt="Frenos">
+            <div>
+                <h3>Frenos</h3>
+                <p>Cambio de pastillas, revision de discos y liquido de frenos para que manejes seguro.</p>
+            </div>
+            <div class="boton-tarjeta">
+                <a href="solicitud.html?servicio=Frenos" class="btn btn-warning boton">Solicitar</a>
+            </div>
+        </article>
 
-  <article class="tarjeta">
-    <img src="img/servicio1.jpg" alt="imagen1">
-    <div>
-      <h3>Servicio 1</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-    <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
+        <article class="tarjeta">
+            <img src="img/servicio3.jpg" alt="Cambio de Aceite">
+            <div>
+                <h3>Cambio de Aceite</h3>
+                <p>Cambiamos el aceite y el filtro con la medida recomendada para el motor de tu auto.</p>
+            </div>
+            <div class="boton-tarjeta">
+                <a href="solicitud.html?servicio=Cambio+de+Aceite" class="btn btn-warning boton">Solicitar</a>
+            </div>
+        </article>
 
-  <article class="tarjeta">
-    <img src="img/servicio2.jpg" alt="imagen2">
-    <div>
-      <h3>Servicio 2</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-        <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
+        <article class="tarjeta">
+            <img src="img/servicio4.webp" alt="Revisión General">
+            <div>
+                <h3>Revisión General</h3>
+                <p>Hacemos un diagnostico completo del motor, la bateria y la parte electrica de tu vehiculo.</p>
+            </div>
+            <div class="boton-tarjeta">
+                <a href="solicitud.html?servicio=Revisión+General" class="btn btn-warning boton">Solicitar</a>
+            </div>
+        </article>
 
-  <article class="tarjeta">
-    <img src="img/servicio3.jpg" alt="imagen3">
-    <div>
-      <h3>Servicio 3</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-        <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
+    </section>
 
-  <article class="tarjeta">
-    <img src="img/servicio4.webp" alt="imagen3">
-    <div>
-      <h3>Servicio 4</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-        <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
+    <section class="acerca container" id="acerca">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Acerca de nosotros</h2>
+                <p>
+                    Somos Solanda Car Service, un taller mecanico ubicado en la Av. Solanda con mas de 10 años
+                    de experiencia en el mantenimiento de vehiculos livianos.
+                </p>
+                <p>
+                    Nuestro objetivo es que tu auto este siempre en buen estado, por eso
+                    trabajamos con repuestos de calidad y mecanicos capacitados.
+                </p>
+                <ul>
+                    <li><b>Mision:</b> dar un servicio rapido, honesto y de calidad.</li>
+                    <li><b>Vision:</b> ser el taller de confianza de nuestro sector.</li>
+                    <li><b>Horario:</b> lunes a viernes de 08:00 a 17:00.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="img/acerca.avif" alt="rodamientos de auto" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
 
-  <article class="tarjeta">
-    <img src="img/servicio4.webp" alt="imagen3">
-    <div>
-      <h3>Servicio 5</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-        <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
-
-  <article class="tarjeta">
-    <img src="img/servicio4.webp" alt="imagen3">
-    <div>
-      <h3>Servicio 6</h3>
-      <p>Presentamos este servicio de ....... para que tu automotor ....</p>
-    </div>
-        <div class="boton-tarjeta">
-        <a href="solicitud.html">
-            <button type="submit">Solicitar</button>
-        </a>
-        
-    </div>
-  </article>
-
-</section>
-</div>
+    </main>
 
     <footer>
-        <div class="copy">
-            &copy; Mi Empresa 2026 todos los derechos reservados.
+        <div class="footer-col">
+            <h4>Solanda Car Service</h4>
+            <p>Cuidamos tu vehiculo como si fuera nuestro.</p>
         </div>
-        <div class="contacto">
-            <p><b>Direccion : </b>Av.Solanda </p>
-            <p><b>Contacto : </b> 099999999</p>
-        </div>
-        <div class="redes">
-            <a href="https://www.instagram.com/">
-                <img src="img/instagram.webp" alt="instagram">
-            </a>
-            <a href="https://www.facebook.com/">
-                <img src="img/facebook.webp" alt="facebook">
-            </a>
-            <a href="https://www.youtube.com/">
-                <img src="img/youtube.webp" alt="instagram">
-            </a>
 
+        <div class="footer-col contacto">
+            <h4>Contacto</h4>
+            <p><b>Direccion:</b> Av. Solanda</p>
+            <p><b>Telefono:</b> 099999999</p>
+            <p><b>Horario:</b> Lunes a Viernes 08:00 - 17:00</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Siguenos</h4>
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/instagram.webp" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/facebook.webp" alt="facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="img/youtube.webp" alt="youtube">
+                </a>
+            </div>
+        </div>
+
+        <div class="copy">
+            &copy; 2026 Solanda Car Service. Todos los derechos reservados.
         </div>
     </footer>
-    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/javascript.js"></script>
+</body>
 </html>

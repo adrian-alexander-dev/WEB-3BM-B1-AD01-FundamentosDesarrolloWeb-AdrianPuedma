@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantenimiento Automotriz</title>
+    <title>Solanda Car Service</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,40 +11,190 @@
     <header>
         <a href="index.html" class="logo">
             <img src="img/imagen1.png" alt="LOGO">
-            <h1>Mantenimiento Automotriz</h1>
+            <h1>Solanda Car Service</h1>
         </a>
 
         <nav>
             <a href="index.html">Inicio</a>
+            <a href="index.html#acerca">Acerca de</a>
             <a href="servicios.html">Servicios</a>
             <a href="solicitud.html">Solicitar Servicio</a>
+            <a href="usuario.html">Mis Mantenimientos</a>
             <a href="admin.html">Administracion</a>
-<a href="login.html" class="boton-login">Iniciar Sesion 
-            </a>
+            <a href="login.html" class="boton-login">Iniciar Sesion</a>
         </nav>
+    </header>
 
-</header>
-    
-<div class = "container-fluid">
+<div class="solicitud container">
+<main>
+  <h1>Solicitud de Mantenimiento</h1>
+  <p>Complete los datos del cliente y del vehículo para programar su turno.</p>
+
+  <form id="formulario-cita">
+
+    <h2>Datos del Cliente</h2>
+
+    <div class="fila tres">
+      <div>
+        <label for="nombre">Nombre Completo </label>
+        <input class="form-control" 
+        type="text" 
+        id="nombre" 
+        placeholder="Ej. Juan Pérez" 
+        required>
+      </div>
+
+      <div>
+        <label for="correo">Correo Electrónico </label>
+        <input class="form-control" type="email" id="correo" placeholder="juan@correo.com" required>
+      </div>
+
+      <div>
+        <label for="telefono">Teléfono</label>
+        <input class="form-control" type="text" id="telefono" placeholder="0991234567"
+               minlength="10" maxlength="10" required>
+      </div>
+    </div>
 
 
-<p>
-    solicitud
+    <h2>Datos del Automóvil</h2>
 
-</p>
+    <div class="fila cuatro">
+      <div>
+        <label for="placa">Placa</label>
+        <input class="form-control" type="text" id="placa" placeholder="ABC-1234" required>
+      </div>
+
+      <div>
+        <label for="marca">Marca </label>
+        <input class="form-control" type="text" id="marca" placeholder="Ej. Toyota" required>
+      </div>
+
+      <div>
+        <label for="modelo">Modelo </label>
+        <input class="form-control" type="text" id="modelo" placeholder="Ej. Corolla" required>
+      </div>
+
+      <div>
+        <label for="anio">Año </label>
+        <input class="form-control" type="number" id="anio" placeholder="Ej. 2020" required>
+      </div>
+
+      <div>
+        <label for="kilometraje">Kilometraje</label>
+        <input class="form-control" type="number" id="kilometraje" placeholder="Ej. 45000" required>
+      </div>
+
+      <div>
+        <label for="servicio">Servicio Requerido </label>
+        <select class="form-select" id="servicio" required>
+          <option value="" disabled selected>Seleccione un servicio</option>
+          <option>Mantenimiento Preventivo</option>
+          <option>Cambio de Aceite</option>
+          <option>Frenos</option>
+          <option>Revisión General</option>
+        </select>
+      </div>
+    </div>
 
 
+    <h2>Turno y Observaciones</h2>
+
+    <div class="fila dos">
+      <div>
+        <label for="fecha">Fecha Deseada </label>
+        <input class="form-control" type="date" id="fecha" required>
+      </div>
+
+      <div>
+        <label for="hora">Hora (08:00 a 17:00) </label>
+        <input class="form-control" type="time" id="hora" min="08:00" max="17:00" required>
+      </div>
+    </div>
+
+    <div class="fila dos">
+      <div>
+        <label>Tipo de Atención </label>
+        <div class="form-check">
+          <input class="form-check-input" 
+          type="radio" 
+          name="atencion" 
+          id="atencion-normal" 
+          value="Normal"
+           checked>
+          <label class="form-check-label" for="atencion-normal">Normal</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="atencion" id="atencion-urgente" value="Urgente">
+          <label class="form-check-label" for="atencion-urgente">Urgente</label>
+        </div>
+      </div>
+
+      <div>
+        <label>Servicios Adicionales</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="extra-lavado" value="Lavado">
+          <label class="form-check-label" for="extra-lavado">Lavado</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="extra-llantas" value="Revisión de llantas">
+          <label class="form-check-label" for="extra-llantas">Revisión de llantas</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="extra-filtro" value="Cambio de filtro de aire">
+          <label class="form-check-label" for="extra-filtro">Cambio de filtro de aire</label>
+        </div>
+      </div>
+    </div>
+
+    <label for="observaciones">Observaciones o Síntomas</label>
+    <textarea class="form-control" id="observaciones" rows="4"
+              placeholder="Detalle ruidos o fallas observadas..."></textarea>
+
+
+    <div class="botones">
+      <button type="submit" class="btn btn-danger btn-enviar">Registrar Cita</button>
+    </div>
+
+  </form>
+</main>
 </div>
 
     <footer>
-         &copy; Mi Empresa 2026 todos los derechos reservados.
-        <div>
-            <b style="color: #000000;">Direccion : </b>Av.Solanda </l>
-            <b style="color: #000000;">Contacto : </b> 099999999
+
+        <div class="footer-col">
+            <h4>Solanda Car Service</h4>
+            <p>Cuidamos tu vehiculo como si fuera nuestro.</p>
         </div>
 
+        <div class="footer-col contacto">
+            <h4>Contacto</h4>
+            <p><b>Direccion:</b> Av.Solanda</p>
+            <p><b>Telefono:</b> 099999999</p>
+            <p><b>Horario:</b> Lunes a Viernes 08:00 - 17:00</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Siguenos</h4>
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/instagram.webp" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/facebook.webp" alt="facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="img/youtube.webp" alt="youtube">
+                </a>
+            </div>
+        </div>
+
+        <div class="copy">
+            &copy; 2026 Solanda Car Service. Todos los derechos reservados.
+        </div>
     </footer>
 
-    hola
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/javascript.js"></script>
 </body>
 </html>
