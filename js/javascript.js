@@ -27,7 +27,7 @@ if (solicitudes == null) {
   solicitudes = [];
 }
 
-let sesion = JSON.parse(localStorage.getItem("sesion"));
+let sesion = JSON.parse(sessionStorage.getItem("sesion"));
 
 guardar();
 
@@ -81,7 +81,7 @@ if (sesion != null) {
 
   botonLogin.addEventListener("click", function (e) {
     e.preventDefault();
-    localStorage.removeItem("sesion");
+    sessionStorage.removeItem("sesion");
     window.location.href = "login.html";
   });
 }
@@ -133,7 +133,7 @@ if (formLogin != null) {
     } else {
       // guardar la sesion
       sesion = { nombre: usuario.nombre, correo: usuario.correo, rol: usuario.rol };
-      localStorage.setItem("sesion", JSON.stringify(sesion));
+      sessionStorage.setItem("sesion", JSON.stringify(sesion));
 
       Swal.fire("Bienvenido", usuario.nombre, "success").then(function () {
         if (usuario.rol == "Administrador") {
