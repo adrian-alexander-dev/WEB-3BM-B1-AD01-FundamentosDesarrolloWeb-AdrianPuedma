@@ -34,7 +34,7 @@ guardar();
 
 // FUNCIONES 
 
-// guarda los arrays e
+// guarda los arrays 
 function guardar() {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   localStorage.setItem("solicitudes", JSON.stringify(solicitudes));
