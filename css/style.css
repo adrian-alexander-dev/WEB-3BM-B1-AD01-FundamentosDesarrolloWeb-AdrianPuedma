@@ -14,12 +14,13 @@ body{
 Barra de navegacion 
 */
 header{
-    background: #190b75;
+    background: #120857;
     margin: 0;
     padding: 5px 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    border-bottom: 5px solid #ffa500;
 }
 nav{
     display: flex;
@@ -37,7 +38,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #ff6b35;
+    color: #ffa500;
 }
 
 h1{
@@ -57,14 +58,18 @@ h1{
     height: 50px;
 }
 .boton-login{
-    background: orange;
+    background: #ffa500;
     border-radius: 19px;
     padding: 10px 20px;
 }
 
+.boton-login:hover{
+    color: #120857;
+}
+
 /* botones (una sola vez) */
 button{
-    background-color: #ff6b35;
+    background-color: #ffa500;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -73,20 +78,20 @@ button{
 }
 
 button:hover{
-    background-color: #aa0303;
+    background-color: #df9112;
 }
 
 /* enlace que se ve como boton */
 .boton{
     display: inline-block;
-    background-color: #ff6b35;
+    background-color: #ffa500;
     color: #ffffff;
     border-radius: 15px;
     padding: 8px 14px;
     text-decoration: none;
 }
 .boton:hover{
-    background-color: #aa0303;
+    background-color: #b0710c;
     color: #ffffff;
 }
 
@@ -105,11 +110,13 @@ main{
 .banner {
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: #190b75;
 }
 
 .banner a {
-    background: orange;
+    background: #ffa500;
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
@@ -117,7 +124,7 @@ main{
 }
 
 .banner img {
-    border-radius: 10%;
+    border-radius: 5%;
     height: 380px;
     max-width: 100%;
     object-fit: cover;
@@ -130,6 +137,7 @@ main{
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    
 }
 
 .tarjeta {
@@ -139,6 +147,7 @@ main{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    border-bottom: 5px solid #ffa500;
 }
 
 .tarjeta img {
@@ -158,10 +167,16 @@ main{
 /* Acerca de */
 .acerca {
     padding: 40px 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #190b75;
+    border: 2px solid #807e7e;
+    border-bottom: 5px solid #ffa500;
 }
 .acerca h2 {
     font-size: 28px;
-    color: #ff6b35;
+    color: #ffa500;
+    text-align: center;
 }
 
 /*Solicitud*/
@@ -169,17 +184,72 @@ main{
 .solicitud {
     max-width: 1000px;
     margin: 40px auto;
-    padding: 25px;
-    background: white;
-    color: #222;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    padding: 35px;
+    background: #190b75;               /* mismo azul de las tarjetas */
+    color: #ffffff;
+    border: 3px solid #ffa500;         /* borde naranja en todo el cuadro */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #00000066;
 }
 .solicitud main{
     padding: 0;
 }
 .solicitud h1{
-    color: black;
+    color: #ffffff;
+}
+.solicitud p{
+    color: #c9c9c9;
+}
+
+/* titulos de cada parte del formulario */
+.solicitud h2{
+    color: #ffa500;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #3a2f9a;
+}
+.solicitud label{
+    color: #e0e0e0;
+}
+
+/* cajas para escribir */
+.solicitud .form-control,
+.solicitud .form-select{
+    background-color: #120857;
+    color: #ffffff;
+    border: 1px solid #3a2f9a;
+}
+.solicitud .form-control::placeholder{
+    color: #8f89c4;
+}
+/* cuando haces clic para escribir */
+.solicitud .form-control:focus,
+.solicitud .form-select:focus{
+    background-color: #120857;
+    color: #ffffff;
+    border-color: #ffa500;
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.25);
+}
+
+/* radios y checkboxes: sin marcar con borde claro, marcados en naranja */
+.solicitud .form-check-input{
+    background-color: #120857;
+    border-color: #8f89c4;
+}
+.solicitud .form-check-input:checked{
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+/* boton Registrar Cita */
+.solicitud .btn-enviar{
+    background: #ffa500;
+    color: #120857;
+    font-weight: bold;
+    border: none;
+}
+.solicitud .btn-enviar:hover{
+    background: #e69500;
+    color: #120857;
 }
 
 h2 {
@@ -343,7 +413,7 @@ footer{
     min-width: 200px;
 }
 .footer-col h4{
-    color: #ff6b35;
+    color: #ffa500;
     font-size: 18px;
     margin-bottom: 10px;
 }

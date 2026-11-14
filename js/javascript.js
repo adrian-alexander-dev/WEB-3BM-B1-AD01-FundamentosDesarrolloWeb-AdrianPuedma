@@ -414,7 +414,7 @@ function editarSolicitud(id) {
       let hora = document.getElementById("edit-hora").value;
       let fecha = document.getElementById("edit-fecha").value;
 
-      if (fecha == "" || hora < "08:00" || hora > "17:00") {
+      if (fecha == "" || fecha < fechaHoy() || hora < "08:00" ||hora > "17:00") {
         Swal.showValidationMessage("Revise la fecha y la hora (08:00 a 17:00)");
         return false;
       }
